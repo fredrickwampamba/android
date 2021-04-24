@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string-array name="names">
+        <item>Kato</item>
+        <item>James</item>
+        <item>Phiona</item>
+    </string-array>
+</resources>
