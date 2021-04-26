@@ -139,7 +139,7 @@
                 android:id="@+id/fonts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/recView"
+                android:layout_below="@id/recycCard"
                 android:layout_centerHorizontal="true"
                 android:text="Fonts" />
         </RelativeLayout>
