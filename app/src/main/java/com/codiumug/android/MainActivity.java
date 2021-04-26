@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Button recyclerView = findViewById(R.id.recView);
         Button recycCard = findViewById(R.id.recycCard);
         Button listView = findViewById(R.id.listView);
+        Button fonts = findViewById(R.id.fonts);
         Button materialDesign = findViewById(R.id.materialDesign);
         TextView fname = findViewById(R.id.fname);
         TextView lname = findViewById(R.id.lname);
@@ -71,6 +72,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent materialActivity = new Intent(MainActivity.this, MaterialDesignEx.class);
+                startActivity(materialActivity);
+            }
+        });
+
+        fonts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent materialActivity = new Intent(MainActivity.this, FontsEx.class);
                 startActivity(materialActivity);
             }
         });
