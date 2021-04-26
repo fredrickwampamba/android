@@ -1,109 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/relativeContactLay">
+    android:id="@+id/relativeContactLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="5dp"
         android:layout_below="@+id/button1"
-        android:id="@+id/materialCardView"
-        >
+        android:layout_marginVertical="5dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            >
+            android:layout_marginHorizontal="10dp">
+
             <LinearLayout
+                android:id="@+id/contactInfo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/contactInfo">
+                android:layout_height="wrap_content">
+
                 <ImageView
+                    android:id="@+id/image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/image"
-                    android:src="@drawable/ic_profile"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_profile" />
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:id="@+id/contactName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
                         android:text="Fredrick Wampamba"
+                        android:textAlignment="center"
                         android:textSize="17dp"
-                        android:textStyle="normal|bold"
-                        android:layout_centerHorizontal="true"
-                        android:textAlignment="center"
-                        />
+                        android:textStyle="normal|bold" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
                         android:id="@+id/phoneNumber"
-                        android:text="+256 702718025"
-                        android:layout_below="@+id/contactName"
-                        android:textSize="20sp"
-                        android:layout_centerHorizontal="true"
-                        android:textAlignment="center"
-                        />
-
-                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:id="@+id/email"
-                        android:textStyle="italic|bold"
-                        android:text="fredrickwampamba1@gmail.com"
-                        android:layout_below="@+id/phoneNumber"
-                        android:textSize="14sp"
+                        android:layout_below="@+id/contactName"
                         android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:text="+256 702718025"
                         android:textAlignment="center"
-                        />
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phoneNumber"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:text="fredrickwampamba1@gmail.com"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="italic|bold" />
                 </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/actions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/actions"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/contactInfo">
+                android:layout_below="@+id/contactInfo"
+                android:layout_centerHorizontal="true">
+
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Call"
                     android:id="@+id/call"
+                    style="@style/Widget.MaterialComponents.FloatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@color/white"
                     android:backgroundTint="@color/green"
-                    style="@style/Widget.MaterialComponents.FloatingActionButton"/>
+                    android:text="Call"
+                    android:textColor="@color/white" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Email"
                     android:id="@+id/Email"
-                    android:layout_weight="1"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/blue"
-                    style="@style/Widget.MaterialComponents.FloatingActionButton"/>
-
-                <Button
+                    style="@style/Widget.MaterialComponents.FloatingActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="Delete"
-                    android:id="@+id/Delete"
                     android:layout_weight="1"
-                    android:textColor="@color/white"
+                    android:backgroundTint="@color/blue"
+                    android:text="Email"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/Delete"
+                    style="@style/Widget.MaterialComponents.FloatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
                     android:backgroundTint="@color/red"
-                    style="@style/Widget.MaterialComponents.FloatingActionButton"/>
+                    android:text="Delete"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
         </RelativeLayout>
