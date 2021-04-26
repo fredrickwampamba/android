@@ -24,7 +24,13 @@ public class MaterialDesignEx extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //We are going to display Snack Bar here
-                Snackbar.make(parent,"You just displayed the snack bar", Snackbar.LENGTH_INDEFINITE).show();
+                Snackbar.make(parent,"You just displayed the snack bar", Snackbar.LENGTH_INDEFINITE)
+                .setAction("DISMISS", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MaterialDesignEx.this, "Snack Bar dismissed", Toast.LENGTH_SHORT).show();
+                    }
+                }).setActionTextColor(getResources().getColor(R.color.white)).setTextColor(getResources().getColor(R.color.purple_200)).show();
             }
         });
 

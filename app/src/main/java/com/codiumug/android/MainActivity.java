@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn = findViewById(R.id.button);
+        Button recyclerView = findViewById(R.id.recView);
+        Button recycCard = findViewById(R.id.recycCard);
         Button listView = findViewById(R.id.listView);
         Button materialDesign = findViewById(R.id.materialDesign);
         TextView fname = findViewById(R.id.fname);
@@ -46,6 +48,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent listviewActivity = new Intent(MainActivity.this, ListViewEx.class);
                 startActivity(listviewActivity);
+            }
+        });
+
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recyclerV = new Intent(MainActivity.this, RecyclerViewEx.class);
+                startActivity(recyclerV);
+            }
+        });
+
+        recycCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recyclerVCard = new Intent(MainActivity.this, CardViewRecyc.class);
+                startActivity(recyclerVCard);
             }
         });
 

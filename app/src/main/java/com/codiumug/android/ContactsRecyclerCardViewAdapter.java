@@ -1,28 +1,39 @@
 package com.codiumug.android;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
-public class ContactsRecyclerCardView extends RecyclerView.Adapter<ContactsRecyclerCardView.ViewHolder> {
+public class ContactsRecyclerCardViewAdapter extends RecyclerView.Adapter<ContactsRecyclerCardViewAdapter.ViewHolder> {
 
+    private Context context;
     ArrayList<Contacts> contacts = new ArrayList<>();
+
+    public void setContacts(ArrayList<Contacts> contacts) {
+        this.contacts = contacts;
+    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_card_view_recyc,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.contact_listing_new,parent,false);
         return new ViewHolder(view);
+    }
+
+    public ContactsRecyclerCardViewAdapter(Context context) {
+        this.context = context;
     }
 
     @Override
@@ -33,6 +44,11 @@ public class ContactsRecyclerCardView extends RecyclerView.Adapter<ContactsRecyc
 //        holder.imageView.;
         holder.contactName.setText(contacts.get(position).getContactName());
         holder.contactName.setText(contacts.get(position).getContactName());
+
+        Glide.with(context)
+                .asBitmap()
+                .load(contacts.get(position).getImageUrl())
+                .into(holder.imageView);
     }
 
     @Override

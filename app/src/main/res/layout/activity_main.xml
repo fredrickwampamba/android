@@ -119,6 +119,22 @@
                 android:layout_below="@id/listView"
                 android:layout_centerHorizontal="true"
                 android:text="Material Design" />
+
+            <Button
+                android:id="@+id/recView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/materialDesign"
+                android:layout_centerHorizontal="true"
+                android:text="Recycler View" />
+
+            <Button
+                android:id="@+id/recycCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recView"
+                android:layout_centerHorizontal="true"
+                android:text="Card Recycler View" />
         </RelativeLayout>
     </ScrollView>
 
